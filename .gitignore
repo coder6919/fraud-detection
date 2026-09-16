@@ -1,4 +1,4 @@
-# Dataset (large, not ours to redistribute)
+# Dataset
 ieee-fraud-detection/
 
 
@@ -9,8 +9,7 @@ backend/**/__pycache__/
 .pytest_cache/
 
 # Generated pipeline artifacts (rebuildable from the dataset)
-# graph.pkl + rings.json ARE tracked (not ignored) — Render can't rebuild them
-# without the dataset, which stays out of git. They're small (~7.5MB total).
+
 backend/data/processed/
 backend/*.log
 
