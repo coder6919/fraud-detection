@@ -1,10 +1,6 @@
 # Dataset (large, not ours to redistribute)
 ieee-fraud-detection/
 
-# Context/continuity docs (working notes, not for the repo history)
-PROGRESS.md
-DIRECTION.md
-FEATURES.md
 
 # Python
 backend/venv/
