@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ForceGraph from "../components/graph/ForceGraph.jsx";
+import LoadingHint from "../components/LoadingHint.jsx";
 import { getAccount, getGraph } from "../lib/api.js";
 import styles from "./AccountView.module.css";
 
@@ -33,7 +34,7 @@ export default function AccountView() {
   }
 
   if (!account) {
-    return <div className={styles.page}><p className={styles.muted}>Loading {accountId}...</p></div>;
+    return <div className={styles.page}><LoadingHint label={`Loading ${accountId}...`} /></div>;
   }
 
   const { node, ring } = account;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ForceGraph from "../components/graph/ForceGraph.jsx";
 import EdgeLegend from "../components/graph/EdgeLegend.jsx";
+import LoadingHint from "../components/LoadingHint.jsx";
 import { getRing } from "../lib/api.js";
 import styles from "./RingDetailView.module.css";
 
@@ -27,7 +28,7 @@ export default function RingDetailView() {
   }
 
   if (!ring) {
-    return <div className={styles.page}><p className={styles.muted}>Loading {ringId}...</p></div>;
+    return <div className={styles.page}><LoadingHint label={`Loading ${ringId}...`} /></div>;
   }
 
   return (

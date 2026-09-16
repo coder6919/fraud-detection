@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ForceGraph from "../components/graph/ForceGraph.jsx";
 import EdgeLegend from "../components/graph/EdgeLegend.jsx";
+import LoadingHint from "../components/LoadingHint.jsx";
 import RingList from "../components/RingList.jsx";
 import { getGraph, listRings } from "../lib/api.js";
 import styles from "./OverviewGraph.module.css";
@@ -47,7 +48,7 @@ export default function OverviewGraph() {
               <EdgeLegend />
             </>
           ) : (
-            <p className={styles.muted}>Loading graph...</p>
+            <LoadingHint label="Loading graph..." />
           )}
         </div>
         <aside className={styles.sidebar}>
