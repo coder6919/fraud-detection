@@ -57,6 +57,18 @@ def build_account_table(df: pd.DataFrame) -> pd.DataFrame:
     return agg
 
 
+def _clean_optional_str(value) -> str | None:
+    """Pandas' nullable "string" dtype silently turns a Python None returned
+    from a groupby.agg lambda into pd.NA once the column is assembled (since
+    other rows in the same column hold real pandas-string scalars) — not
+    Python's own None. pd.isna() catches that (and NaN/NaT) uniformly; a
+    plain `value is None` check would miss it and let pd.NA leak into the
+    graph, then into the JSON API response, where nothing downstream expects
+    a pandas sentinel instead of null.
+    """
+    return None if pd.isna(value) else str(value)
+
+
 def build_graph(df: pd.DataFrame) -> nx.Graph:
     accounts = build_account_table(df)
 
@@ -69,8 +81,8 @@ def build_graph(df: pd.DataFrame) -> nx.Graph:
             first_seen=float(row["first_seen"]),
             last_seen=float(row["last_seen"]),
             total_amount=float(row["total_amount"]),
-            primary_email=row["primary_email"],
-            device_type=row["device_type"],
+            primary_email=_clean_optional_str(row["primary_email"]),
+            device_type=_clean_optional_str(row["device_type"]),
         )
 
     excluded_values = 0
