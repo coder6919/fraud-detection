@@ -1,0 +1,34 @@
+# Dataset (large, not ours to redistribute)
+ieee-fraud-detection/
+
+# Context/continuity docs (working notes, not for the repo history)
+PROGRESS.md
+DIRECTION.md
+FEATURES.md
+
+# Python
+backend/venv/
+backend/**/__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated pipeline artifacts (rebuildable from the dataset)
+# graph.pkl + rings.json ARE tracked (not ignored) — Render can't rebuild them
+# without the dataset, which stays out of git. They're small (~7.5MB total).
+backend/data/processed/
+backend/*.log
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Env / secrets
+.env
+.env.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

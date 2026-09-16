@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-rule);
+  background: var(--color-paper);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-md);
+  text-decoration: none;
+  color: var(--color-ink);
+}

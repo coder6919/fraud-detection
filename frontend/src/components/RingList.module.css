@@ -1,0 +1,32 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-sm) var(--space-xs);
+  text-decoration: none;
+  color: var(--color-ink);
+}
+
+.row:hover {
+  background: var(--color-paper-2);
+}
+
+.active .row {
+  border-left: 2px solid var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.meta {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}

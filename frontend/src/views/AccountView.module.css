@@ -1,0 +1,82 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-3xl);
+}
+
+.back {
+  display: inline-block;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  text-decoration: none;
+  margin-bottom: var(--space-sm);
+}
+
+.back:hover {
+  color: var(--color-accent);
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-md);
+  margin: 0 0 var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.statValue {
+  margin: 0;
+  font-size: var(--text-md);
+  color: var(--color-ink);
+}
+
+.statAccent {
+  color: var(--color-accent);
+}
+
+.ringNote, .muted {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.ringNote a {
+  color: var(--color-accent);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.graphPane {
+  margin-top: var(--space-lg);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+}
+
+.sectionTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}

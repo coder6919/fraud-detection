@@ -1,0 +1,8 @@
+pandas
+numpy
+networkx
+python-louvain
+scikit-learn
+fastapi
+uvicorn[standard]
+pydantic
