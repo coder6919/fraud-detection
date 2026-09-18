@@ -57,3 +57,34 @@ class AccountDetail(BaseModel):
     node: NodeOut
     ring: RingSummary | None
     neighbors: list[EdgeOut]
+
+
+class ScoreRequest(BaseModel):
+    """Exactly one of sample_id (score a curated real transaction, using its
+    true feature values) or fields (score a "build your own" simplified
+    submission, defaults filling everything else) must be set."""
+    sample_id: str | None = None
+    fields: dict[str, str | float | int] | None = None
+
+
+class ScoreResponse(BaseModel):
+    fraud_probability: float
+    flagged: bool
+    matched_ring_id: str | None
+    ring_context: RingSummary | None
+    ring_note: str
+
+
+class SampleTransaction(BaseModel):
+    sample_id: str
+    label: str
+    true_is_fraud: bool
+    account_id: str
+    display_fields: dict[str, str | float]
+    matched_ring_id: str | None
+
+
+class SampleListResponse(BaseModel):
+    samples: list[SampleTransaction]
+    top_fields: list[str]
+    field_importances: dict[str, float]

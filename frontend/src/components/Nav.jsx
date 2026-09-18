@@ -6,7 +6,10 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <Link to="/" className={styles.brand}>Fraud Ring Detection</Link>
-      <SearchBar />
+      <div className={styles.right}>
+        <Link to="/score" className={styles.link}>Score a transaction</Link>
+        <SearchBar />
+      </div>
     </nav>
   );
 }

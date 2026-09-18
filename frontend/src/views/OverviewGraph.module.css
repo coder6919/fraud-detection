@@ -8,9 +8,33 @@
   margin-bottom: var(--space-lg);
 }
 
+.headerRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xs);
+}
+
 .header h1 {
   font-size: var(--text-xl);
-  margin-bottom: var(--space-2xs);
+  margin-bottom: 0;
+}
+
+.scoreCta {
+  flex-shrink: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-control);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  text-decoration: none;
+}
+
+.scoreCta:hover {
+  background: var(--color-ink-2);
 }
 
 .muted {

@@ -1,0 +1,300 @@
+[
+  {
+    "sample_id": "sample_00",
+    "label": "$0 C purchase, no device info, hotmail.com \u2014 linked to ring_0054 (4 accounts, 67% fraud rate)",
+    "true_is_fraud": true,
+    "account_id": "a1c01af49f98",
+    "fields": {
+      "TransactionAmt": 0.424,
+      "hour_of_day": 20.0,
+      "day_of_week": 4.0,
+      "ProductCD": "C",
+      "card4": "visa",
+      "card6": "credit",
+      "P_emaildomain": "hotmail.com",
+      "R_emaildomain": "hotmail.com",
+      "DeviceType": "missing"
+    },
+    "display_fields": {
+      "R_emaildomain": "hotmail.com",
+      "ProductCD": "C",
+      "card6": "credit",
+      "TransactionAmt": 0.424,
+      "DeviceType": "missing",
+      "P_emaildomain": "hotmail.com",
+      "hour_of_day": 20.0,
+      "card4": "visa"
+    },
+    "matched_ring_id": "ring_0054",
+    "matched_ring": {
+      "ring_id": "ring_0054",
+      "size": 4,
+      "density": 1.0,
+      "fraud_rate": 0.6667,
+      "creation_tightness": 0.0545,
+      "score": 0.8582,
+      "oversized": false,
+      "hub_accounts": [
+        {
+          "account_id": "66e22f27e0d1",
+          "centrality": 0.0
+        },
+        {
+          "account_id": "5f3f203975e3",
+          "centrality": 0.0
+        },
+        {
+          "account_id": "7a539d5c639c",
+          "centrality": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": "sample_01",
+    "label": "$184 C purchase, desktop, gmail.com \u2014 linked to ring_0019 (14 accounts, 57% fraud rate)",
+    "true_is_fraud": true,
+    "account_id": "fad63958ceaf",
+    "fields": {
+      "TransactionAmt": 184.122,
+      "hour_of_day": 18.0,
+      "day_of_week": 5.0,
+      "ProductCD": "C",
+      "card4": "mastercard",
+      "card6": "credit",
+      "P_emaildomain": "gmail.com",
+      "R_emaildomain": "gmail.com",
+      "DeviceType": "desktop"
+    },
+    "display_fields": {
+      "R_emaildomain": "gmail.com",
+      "ProductCD": "C",
+      "card6": "credit",
+      "TransactionAmt": 184.122,
+      "DeviceType": "desktop",
+      "P_emaildomain": "gmail.com",
+      "hour_of_day": 18.0,
+      "card4": "mastercard"
+    },
+    "matched_ring_id": "ring_0019",
+    "matched_ring": {
+      "ring_id": "ring_0019",
+      "size": 14,
+      "density": 1.0,
+      "fraud_rate": 0.5652,
+      "creation_tightness": 0.0,
+      "score": 0.7435,
+      "oversized": false,
+      "hub_accounts": [
+        {
+          "account_id": "fad63958ceaf",
+          "centrality": 0.0
+        },
+        {
+          "account_id": "5dc5b2c43320",
+          "centrality": 0.0
+        },
+        {
+          "account_id": "37cccf4696c5",
+          "centrality": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": "sample_02",
+    "label": "$79 C purchase, desktop, hotmail.com \u2014 linked to ring_0019 (14 accounts, 57% fraud rate)",
+    "true_is_fraud": true,
+    "account_id": "f774f5f7f110",
+    "fields": {
+      "TransactionAmt": 79.029,
+      "hour_of_day": 17.0,
+      "day_of_week": 0.0,
+      "ProductCD": "C",
+      "card4": "visa",
+      "card6": "debit",
+      "P_emaildomain": "hotmail.com",
+      "R_emaildomain": "hotmail.com",
+      "DeviceType": "desktop"
+    },
+    "display_fields": {
+      "R_emaildomain": "hotmail.com",
+      "ProductCD": "C",
+      "card6": "debit",
+      "TransactionAmt": 79.029,
+      "DeviceType": "desktop",
+      "P_emaildomain": "hotmail.com",
+      "hour_of_day": 17.0,
+      "card4": "visa"
+    },
+    "matched_ring_id": "ring_0019",
+    "matched_ring": {
+      "ring_id": "ring_0019",
+      "size": 14,
+      "density": 1.0,
+      "fraud_rate": 0.5652,
+      "creation_tightness": 0.0,
+      "score": 0.7435,
+      "oversized": false,
+      "hub_accounts": [
+        {
+          "account_id": "fad63958ceaf",
+          "centrality": 0.0
+        },
+        {
+          "account_id": "5dc5b2c43320",
+          "centrality": 0.0
+        },
+        {
+          "account_id": "37cccf4696c5",
+          "centrality": 0.0
+        }
+      ]
+    }
+  },
+  {
+    "sample_id": "sample_03",
+    "label": "$66 C purchase, mobile, gmail.com",
+    "true_is_fraud": true,
+    "account_id": "a15468a312fa",
+    "fields": {
+      "TransactionAmt": 66.462,
+      "hour_of_day": 9.0,
+      "day_of_week": 1.0,
+      "ProductCD": "C",
+      "card4": "mastercard",
+      "card6": "credit",
+      "P_emaildomain": "gmail.com",
+      "R_emaildomain": "gmail.com",
+      "DeviceType": "mobile"
+    },
+    "display_fields": {
+      "R_emaildomain": "gmail.com",
+      "ProductCD": "C",
+      "card6": "credit",
+      "TransactionAmt": 66.462,
+      "DeviceType": "mobile",
+      "P_emaildomain": "gmail.com",
+      "hour_of_day": 9.0,
+      "card4": "mastercard"
+    },
+    "matched_ring_id": null,
+    "matched_ring": null
+  },
+  {
+    "sample_id": "sample_04",
+    "label": "$73 C purchase, mobile, gmail.com",
+    "true_is_fraud": true,
+    "account_id": "74d9dc684659",
+    "fields": {
+      "TransactionAmt": 73.229,
+      "hour_of_day": 11.0,
+      "day_of_week": 4.0,
+      "ProductCD": "C",
+      "card4": "visa",
+      "card6": "credit",
+      "P_emaildomain": "gmail.com",
+      "R_emaildomain": "gmail.com",
+      "DeviceType": "mobile"
+    },
+    "display_fields": {
+      "R_emaildomain": "gmail.com",
+      "ProductCD": "C",
+      "card6": "credit",
+      "TransactionAmt": 73.229,
+      "DeviceType": "mobile",
+      "P_emaildomain": "gmail.com",
+      "hour_of_day": 11.0,
+      "card4": "visa"
+    },
+    "matched_ring_id": null,
+    "matched_ring": null
+  },
+  {
+    "sample_id": "sample_05",
+    "label": "$41 C purchase, mobile, gmail.com",
+    "true_is_fraud": true,
+    "account_id": "8aa4cebbcb7d",
+    "fields": {
+      "TransactionAmt": 41.069,
+      "hour_of_day": 4.0,
+      "day_of_week": 5.0,
+      "ProductCD": "C",
+      "card4": "visa",
+      "card6": "credit",
+      "P_emaildomain": "gmail.com",
+      "R_emaildomain": "gmail.com",
+      "DeviceType": "mobile"
+    },
+    "display_fields": {
+      "R_emaildomain": "gmail.com",
+      "ProductCD": "C",
+      "card6": "credit",
+      "TransactionAmt": 41.069,
+      "DeviceType": "mobile",
+      "P_emaildomain": "gmail.com",
+      "hour_of_day": 4.0,
+      "card4": "visa"
+    },
+    "matched_ring_id": null,
+    "matched_ring": null
+  },
+  {
+    "sample_id": "sample_06",
+    "label": "$100 R purchase, desktop, anonymous.com",
+    "true_is_fraud": false,
+    "account_id": "92f69ddc195f",
+    "fields": {
+      "TransactionAmt": 100.0,
+      "hour_of_day": 14.0,
+      "day_of_week": 5.0,
+      "ProductCD": "R",
+      "card4": "american express",
+      "card6": "credit",
+      "P_emaildomain": "anonymous.com",
+      "R_emaildomain": "anonymous.com",
+      "DeviceType": "desktop"
+    },
+    "display_fields": {
+      "R_emaildomain": "anonymous.com",
+      "ProductCD": "R",
+      "card6": "credit",
+      "TransactionAmt": 100.0,
+      "DeviceType": "desktop",
+      "P_emaildomain": "anonymous.com",
+      "hour_of_day": 14.0,
+      "card4": "american express"
+    },
+    "matched_ring_id": null,
+    "matched_ring": null
+  },
+  {
+    "sample_id": "sample_07",
+    "label": "$100 R purchase, desktop, anonymous.com",
+    "true_is_fraud": false,
+    "account_id": "bec16f067fed",
+    "fields": {
+      "TransactionAmt": 100.0,
+      "hour_of_day": 14.0,
+      "day_of_week": 5.0,
+      "ProductCD": "R",
+      "card4": "american express",
+      "card6": "credit",
+      "P_emaildomain": "anonymous.com",
+      "R_emaildomain": "anonymous.com",
+      "DeviceType": "desktop"
+    },
+    "display_fields": {
+      "R_emaildomain": "anonymous.com",
+      "ProductCD": "R",
+      "card6": "credit",
+      "TransactionAmt": 100.0,
+      "DeviceType": "desktop",
+      "P_emaildomain": "anonymous.com",
+      "hour_of_day": 14.0,
+      "card4": "american express"
+    },
+    "matched_ring_id": null,
+    "matched_ring": null
+  }
+]

@@ -14,3 +14,19 @@
   text-decoration: none;
   color: var(--color-ink);
 }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.link {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-accent);
+}

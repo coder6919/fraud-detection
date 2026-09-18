@@ -9,6 +9,19 @@ async function getJSON(path) {
   return res.json();
 }
 
+async function postJSON(path, payload) {
+  const res = await fetch(`${API_BASE}${path}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.detail || `${res.status} ${res.statusText}`);
+  }
+  return res.json();
+}
+
 export function listRings({ minScore = 0, limit = 50, offset = 0 } = {}) {
   const params = new URLSearchParams({ min_score: minScore, limit, offset });
   return getJSON(`/rings?${params}`);
@@ -29,4 +42,16 @@ export function getGraph({ ringId, accountId, hops = 1, minScore = 0.3, limit = 
   if (ringId) params.set("ring_id", ringId);
   if (accountId) params.set("account_id", accountId);
   return getJSON(`/graph?${params}`);
+}
+
+export function getScoreSamples() {
+  return getJSON("/score/samples");
+}
+
+export function scoreSample(sampleId) {
+  return postJSON("/score", { sample_id: sampleId });
+}
+
+export function scoreFields(fields) {
+  return postJSON("/score", { fields });
 }

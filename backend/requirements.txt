@@ -3,6 +3,7 @@ numpy
 networkx
 python-louvain
 scikit-learn
+joblib
 fastapi
 uvicorn[standard]
 pydantic

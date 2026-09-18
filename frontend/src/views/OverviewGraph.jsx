@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ForceGraph from "../components/graph/ForceGraph.jsx";
 import EdgeLegend from "../components/graph/EdgeLegend.jsx";
 import LoadingHint from "../components/LoadingHint.jsx";
@@ -25,7 +25,10 @@ export default function OverviewGraph() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <h1>Flagged rings</h1>
+        <div className={styles.headerRow}>
+          <h1>Flagged rings</h1>
+          <Link to="/score?mode=own" className={styles.scoreCta}>Score a transaction &rarr;</Link>
+        </div>
         <p className={styles.muted}>
           Candidate fraud rings from shared-identifier clustering, ranked by score. Click a node or a ring to
           open its detail view.

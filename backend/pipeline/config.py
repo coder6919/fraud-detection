@@ -30,3 +30,6 @@ COMMON_DOMAIN_WEIGHT_MULTIPLIER = 0.15
 # and excluded from edge creation entirely (e.g. a DeviceInfo string that's actually
 # a generic "Windows" bucket rather than a real fingerprint).
 MAX_ACCOUNTS_PER_IDENTIFIER_VALUE = 40
+
+# Live scoring (section 9): probability at/above this is reported as "flagged".
+SCORE_FLAG_THRESHOLD = 0.5
